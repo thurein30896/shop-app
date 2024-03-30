@@ -27,7 +27,6 @@ export const cartItemsHandler = (e) => {
 }
 
 export const orderNowHandler = () => {
-    // console.log("Order");
     const count = document.querySelectorAll(".cart-item").length;
     if(count > 0){
         orderFunction();
