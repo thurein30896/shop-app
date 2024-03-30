@@ -40,8 +40,8 @@ export const cartBtnHandler = () => {
 }
 
 export const searchBtnHandler = () => {
-    searchBtn.classList.add("hidden");
-    searchInput.classList.remove("hidden");
+    searchBtn.classList.toggle("hidden");
+    searchInput.classList.toggle("hidden");
     searchInput.focus();  
 }
 
@@ -50,5 +50,6 @@ export const inputHandler = (e) => {
         productRender(products.filter((product) => product.title.toLowerCase().search(searchInput.value.toLowerCase()) >= 0))
 
         searchInput.value = "";
+        searchBtnHandler();
     }
 }
